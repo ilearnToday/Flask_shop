@@ -1,0 +1,63 @@
+body {
+    font-family: monospace;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.site_menu {
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+.under_menu_block{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.menu-button {
+
+    width: 16.5%;
+    background-color: #ededed;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+img{
+    float: left;
+
+}
+
+.notebook_description{
+    display: flex;
+    flex-direction: row;
+    width: 33%
+
+
+}
+
+.price-block{
+    display: flex ;
+    flex-direction: column;
+    width: 33%;
+}
+
+.computers-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-page-img{
+    float: left;
+    width: 250px;
+    height: 190px;
+}
+
+.computer-card{
+    display: flex;
+    flex-direction: column;
+}
+
+

@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="main_page_container">
+    <div class="main_page_header">
+        <h1> Simple flask shop</h1>
+    </div>
+    <div class="computers-container">
+        {% for computer in computers %}
+            <div class="computer_item">
+                <img class="main-page-img" src="{{url_for ('static', filename=computer.img_link)}}">
+                    <div class="computer-card">
+                        {{computer.name}}
+                        {{computer.price}}{{computer.currency}}
+                        <form class="main-to-product">
+                            <button class="to-product" formaction="{{computer.page_link}}">
+                                View
+                            </button>
+                        </form>
+                    </div>
+            </div>
+        {%endfor%}
+    </div>
+
+</div>
+{% endblock content %}
