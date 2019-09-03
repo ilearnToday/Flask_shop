@@ -16,9 +16,7 @@ body {
 
 }
 
-
 .menu-button {
-
     width: 16.5%;
     background-color: #ededed;
     text-align: center;
@@ -27,15 +25,12 @@ body {
 
 img{
     float: left;
-
 }
 
 .notebook_description{
     display: flex;
     flex-direction: row;
     width: 33%
-
-
 }
 
 .price-block{
@@ -46,7 +41,8 @@ img{
 
 .computers-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .main-page-img{
@@ -55,9 +51,11 @@ img{
     height: 190px;
 }
 
-.computer-card{
+.computer-card {
     display: flex;
     flex-direction: column;
+    padding-top: 7%;
+    padding-left: 2%;
 }
 
 
