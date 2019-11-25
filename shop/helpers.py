@@ -1,13 +1,6 @@
-
 import random
-
-
-menu = {"description",
-        "stats",
-        "modifications",
-        "prices",
-        "reviews",
-        "discussions"}
+from shop import db
+from shop.models import Menu, Computers
 
 
 class Computer:
@@ -33,5 +26,23 @@ class Computer:
         return computers
 
 
-computers = Computer.generate_n_computers(5)
+def create_db():
+    db.drop_all()
+    db.create_all()
 
+
+def fill_db():
+    for item in {"description", "stats", "modifications", "prices", "reviews", "discussions"}:
+        menu_item = Menu(name=item)
+        db.session.add(menu_item)
+
+    computers = Computer.generate_n_computers(5)
+    for cmp in computers:
+        computer = Computers(name=cmp.name,
+                             price=cmp.price,
+                             currency=cmp.currency,
+                             page_link=cmp.page_link,
+                             img_file=cmp.img_link
+                             )
+        db.session.add(computer)
+    db.session.commit()

@@ -7,7 +7,7 @@
     <div class="computers-container">
         {% for computer in computers %}
             <div class="computer_item">
-                <img class="main-page-img" src="{{url_for ('static', filename=computer.img_link)}}">
+                <img class="main-page-img" src="{{url_for ('static', filename=computer.img_file)}}">
                     <div class="computer-card">
                         {{computer.name}}
                         {{computer.price}}{{computer.currency}}

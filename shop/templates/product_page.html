@@ -2,28 +2,28 @@
 {%block content%}
 <div class="site_menu">
         {% for item in menu %}
-                <button class="menu-button">{{item}}</button>
+                <button class="menu-button">{{item.name}}</button>
         {% endfor %}
     </div>
     <div class="under_menu_block">
 
         <div class="picture_block">
-            <img src="{{url_for ('static', filename=computers[product_id-1].img_link)}}">
+            <img src="{{url_for ('static', filename=computer.img_file)}}">
         </div>
 
         <div class="notebook_description">
             <ul>
-                <li>{{computers[product_id-1].name}}</li>
-                <li>{{computers[product_id-1].display_size}}</li>
-                <li>{{computers[product_id-1].disk_size}}</li>
-                <li>{{computers[product_id-1].weight}}</li>
-                <li>{{computers[product_id-1].memory_size}}</li>
+                <li>{{computer.name}}</li>
+                <li>{{computer.display_size}}</li>
+                <li>{{computer.disk_size}}</li>
+                <li>{{computer.weight}}</li>
+                <li>{{computer.memory_size}}</li>
             </ul>
         </div>
 
         <div class="price-block">
             <div class="price">
-                {{computers[product_id-1].price}}{{computers[product_id-1].currency}}
+                {{computer.price}}{{computer.currency}}
             </div>
             <form class="button-back">
                 <button formaction="/shop/">Main page -></button>
